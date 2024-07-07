@@ -1,0 +1,9 @@
+main {
+    position: relative;
+    padding: .1px;
+    background-color: #ffffff67;
+}
+
+.cited-img.background {
+    z-index: -1;
+}

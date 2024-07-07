@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Web Development">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="author" content="Khang Vo">
+    <title>Register</title>
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/form.css">
+    <link rel="stylesheet" href="css/register.css">
+    <!-- Bootstrap icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Concert+One&family=Fredoka:wght@400;600&family=Nunito:wght@400;500;600;700;800;900&display=swap">
+    <!-- jQuery library -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.min.js"></script>
+    <!-- JavaScript -->
+    <script src="js/app.js"></script>
+</head>
+<body>
+    <div class="navigation-sidebar">
+        <div class="overlay"></div>
+
+        <nav>
+            <div class="nav-header">
+                <h3>Navigation</h3>
+
+                <div class="close-btn">
+                    <i class="bi bi-chevron-left"></i>
+                </div>
+            </div>
+
+            <a href="index.html">Home</a>
+            <a href="#" class="active">Register</a>
+            <a href="features.html">Features</a>
+            <a href="order.html">Order</a>
+        </nav>
+    </div>
+
+    <header>
+        <div class="hamburger-menu">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+
+        <div class="title">
+            <h1>SWEET LIFE</h1>
+        </div>
+
+        <nav class="navigation-inline">
+            <a href="index.html">Home</a>
+            <a href="#" class="active">Register</a>
+            <a href="features.html">Features</a>
+            <a href="order.html" class="order-btn">Order</a>
+        </nav>
+
+        <a href="order.html" class="order">
+            <i class="bi bi-bag-fill"></i>
+        </a>
+    </header>
+
+    <main id="register">
+        <div class="cited-img background">
+            <img src="images/common-ice-cream.jpeg" alt="">
+            <a class="cite" href="https://stock.adobe.com/au/153684987">Image by fahrwasser on Adobe Stock (Licensed)</a>
+        </div>
+
+        <h2>Registration</h2>
+        <form method="post" action="https://mercury.swin.edu.au/it000000/formtest.php">
+            <!-- Registration information -->
+            <div class="form-group" id="registration-info">
+                <div class="desc">
+                    <h3>Registration Information</h3>
+                    <p>Information for authentication.</p>
+                </div>
+                <div class="input">
+                    <div class="input-group required">
+                        <label for="username">Username</label>
+                        <input type="text" name="username" id="username" placeholder="Type here...">
+                        <div class="error-msg"></div>
+                    </div>
+
+                    <div class="input-group required">
+                        <label for="email">Email</label>
+                        <input type="text" name="email" id="email" placeholder="Type here...">
+                        <div class="error-msg"></div>
+                    </div>
+
+                    <div class="input-group required">
+                        <label for="password">Password</label>
+                        <input type="password" name="password" id="password" placeholder="Type here...">
+                        <div class="error-msg"></div>
+                    </div>
+
+                    <div class="input-group required">
+                        <label for="retype-password">Retype Password</label>
+                        <input type="password" name="retype-password" id="retype-password" placeholder="Type here...">
+                        <div class="error-msg"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Personal information -->
+            <div class="form-group" id="personal-info">
+                <div class="desc">
+                    <h3>Personal Information</h3>
+                    <p>Let us know your information and interests.</p>
+                </div>
+                <div class="input">
+                    <div class="two-columns">
+                        <div class="input-group required">
+                            <label for="fname">First name</label>
+                            <input type="text" name="fname" id="fname" placeholder="Type here...">
+                            <div class="error-msg"></div>
+                        </div>
+                        <div class="input-group required">
+                            <label for="lname">Last name</label>
+                            <input type="text" name="lname" id="lname" placeholder="Type here...">
+                            <div class="error-msg"></div>
+                        </div>
+                    </div>
+
+                    <div class="two-columns">
+                        <div class="input-group required">
+                            <label for="age">Age</label>
+                            <input type="number" name="age" id="age" placeholder="Type here...">
+                            <div class="error-msg"></div>
+                        </div>
+                        <div class="input-group required">
+                            <p>Gender</p>
+                            <div id="gender" class="choice-group">
+                                <label for="rMale" class="choice-option">
+                                    <input type="radio" name="gender" id="rMale" value="male">
+                                    <span class="custom-radio"></span>
+                                    Male
+                                </label>
+                                <label for="rFemale" class="choice-option">
+                                    <input type="radio" name="gender" id="rFemale" value="female">
+                                    <span class="custom-radio"></span>
+                                    Female
+                                </label>
+                            </div>
+                            <div class="error-msg"></div>
+                        </div>
+                    </div>
+
+                    <div class="input-group required">
+                        <label for="address">Address</label>
+                        <input type="text" name="address" id="address" placeholder="Type here...">
+                        <div class="error-msg"></div>
+                    </div>
+
+                    <div class="input-group required">
+                        <label for="postcode">Postcode</label>
+                        <input type="text" name="postcode" id="postcode" placeholder="Type here...">
+                        <div class="error-msg"></div>
+                    </div>
+
+                    <div class="input-group required">
+                        <label for="lang">Primary Language</label>
+                        <select name="lang" id="lang">
+                            <option value="" disabled selected hidden>None</option>
+                            <option value="en">English</option>
+                            <option value="fr">French</option>
+                            <option value="es">Spanish</option>
+                            <option value="zh">Chinese</option>
+                        </select>
+                        <div class="error-msg"></div>
+                    </div>
+
+                    <div class="input-group required">
+                        <p>Favorite type of ice-cream</p>
+                        <div id="fav-type" class="choice-group">
+                            <label for="cbCup" class="choice-option">
+                                <input type="checkbox" name="favType[]" id="cbCup" value="cup">
+                                <span class="custom-checkbox"></span>
+                                Cup ice-cream
+                            </label>
+                            <label for="cbCone" class="choice-option">
+                                <input type="checkbox" name="favType[]" id="cbCone" value="cone">
+                                <span class="custom-checkbox"></span>
+                                Cone ice-cream
+                            </label>
+                            <label for="cbPopsicle" class="choice-option">
+                                <input type="checkbox" name="favType[]" id="cbPopsicle" value="popsicle">
+                                <span class="custom-checkbox"></span>
+                                Popsicle ice-cream
+                            </label>
+                        </div>
+                        <div class="error-msg"></div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="two-columns">
+                <input type="submit" value="Submit">
+                <input type="reset" value="Reset">
+            </div>
+        </form>
+    </main>
+
+    <footer>
+        <div class="brand">
+            <h1>SWEET LIFE</h1>
+            <div class="contacts">
+                <a href="#"><i class="bi bi-facebook"></i></a>
+                <a href="#"><i class="bi bi-instagram"></i></a>
+                <a href="#"><i class="bi bi-linkedin"></i></a>
+                <a href="#"><i class="bi bi-whatsapp"></i></a>
+            </div>
+        </div>
+
+        <div class="copyright">
+            &copy; 2023 Khang Vo<br>
+            Department of Computer Science<br>
+            Swinburne University of Technology
+        </div>
+    </footer>
+</body>
+</html>

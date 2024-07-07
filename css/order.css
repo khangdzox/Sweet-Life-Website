@@ -1,0 +1,22 @@
+main {
+    position: relative;
+    padding: .1px;
+    background-color: #ffffff67;
+}
+
+.cited-img.background {
+    z-index: -1;
+}
+
+#product-img {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+}
+
+#product-img .cited-img {
+    margin: auto;
+    display: none;
+    width: 100%;
+    max-width: 400px;
+}

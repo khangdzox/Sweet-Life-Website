@@ -1,0 +1,292 @@
+form {
+    max-width: 800px;
+    margin: 32px auto;
+    padding: 0 20px;
+}
+
+/* Form layout components */
+
+/* Form group: a group with heading, description, and many inputs */
+form .form-group {
+    margin-bottom: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.2);
+}
+
+form .form-group .desc {
+    padding: 1rem;
+    background-color: white;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+    border-bottom: 2px solid lightgray;
+}
+
+form .form-group .input {
+    padding: 1rem;
+    background-color: white;
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
+}
+
+/* Layout block to display form element in two columns in wide screen and one column in narrow screen */
+form .two-columns {
+    display: grid;
+    grid-template-columns: auto;
+    row-gap: 10px;
+    margin: 10px 0;
+}
+
+/* Layout block used in .two-columns to display multiple rows in one column */
+form .rows {
+    display: grid;
+    grid-auto-rows: min-content;
+    row-gap: 10px;
+}
+
+/* An input group include a label and an input/select/textarea/choice-group */
+form .input-group {
+    height: fit-content;
+    display: grid;
+    margin: 10px 0;
+}
+
+/* Remove input-group margin when used in two-columns */
+form .two-columns .input-group {
+    margin: 0;
+}
+
+/* A choice group include several checkboxes or radio buttons */
+form .choice-group {
+    display: grid;
+    grid-template-columns: auto;
+    row-gap: 10px;
+    justify-content: space-between;
+    width: 100%;
+    min-height: 32px;
+}
+
+/* A choice option include a label, a checkbox/radio button, and a span element to display custom checkbox/radio */
+form .choice-option {
+    display: inline-flex;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    padding-left: 25px;
+    -webkit-user-select: none;
+    user-select: none;
+    font-size: .9rem;
+}
+
+form .choice-option > input {
+    display: none;
+    position: absolute;
+}
+
+/* Form elements */
+
+/* Label */
+form label, p {
+    margin: 0;
+}
+
+/* Form group heading */
+form .form-group .desc h3 {
+    font-family: Fredoka, sans-serif;
+    font-size: 1.5rem;
+}
+
+/* Form group description */
+form .form-group .desc p {
+    color: #555;
+    font-style: italic;
+}
+
+/* Hidden input groups */
+form .input-group.hidden {
+    display: none;
+}
+
+/* Required input groups has suffix * in red */
+form .input-group.required > p:after,
+form .input-group.required > label:after {
+    display: inline;
+    content: '*';
+    color: red;
+}
+
+/* Error messages */
+form .input-group .error-msg {
+    font-size: .8rem;
+    font-style: italic;
+    color: red;
+}
+
+/* Styling form input/select */
+form input,
+form select {
+    height: 2rem;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #efefef;
+    box-shadow: inset 2px 2px 2px #00000020;
+    border: 1px solid #946E4855;
+    outline: 0px solid #af8255;
+    transition: background-color .3s;
+}
+
+/* Coloring submit button */
+form input[type=submit] {
+    background-color: #c7925d;
+}
+
+/* Styling buttons */
+form input[type=button],
+form input[type=submit],
+form input[type=reset] {
+    box-shadow: none;
+    cursor: pointer;
+}
+
+/* Styling form textarea */
+form textarea {
+    height: 10rem;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #efefef;
+    box-shadow: inset 2px 2px 2px #00000020;
+    border: 1px solid #946E4855;
+    font-size: 1rem;
+    transition: background-color .3s;
+}
+
+/* Styling disabled inputs */
+form input:disabled,
+form select:disabled,
+form textarea:disabled {
+    cursor: not-allowed;
+    background-color: #ffffff;
+    box-shadow: none;
+}
+
+/* Styling enabled input on hover */
+form input:not(:disabled):hover, 
+form select:not(:disabled):hover,
+form textarea:not(:disabled):hover {
+    background-color: #cdcdcd;
+}
+
+/* Coloring submit button on hover */
+form input[type=submit]:hover {
+    background-color: #af8255;
+}
+
+/* Styling inputs on focus */
+form input:focus,
+form select:focus,
+form textarea:focus {
+    outline: 2px solid #946E48;
+    background-color: #d9d9d9;
+}
+
+/* Coloring submit button on focus */
+form input[type=submit]:focus {
+    background-color: #946E48;
+}
+
+/* Coloring select options */
+form option,
+form option:hover,
+form option:focus {
+    background-color: #efefef;
+}
+
+/* Custom checkbox/radio button */
+form .custom-radio {
+    position: absolute;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: #0000000d;
+    box-shadow: inset 2px 2px 2px #00000020;
+    border: 1px solid #946E4855;
+    border-radius: 50%;
+    transition: all .3s;
+}
+
+form .custom-checkbox {
+    position: absolute;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: #0000000d;
+    box-shadow: inset 2px 2px 2px #00000020;
+    border: 1px solid #946E4855;
+    border-radius: 4px;
+    transition: all .3s;
+}
+
+form .custom-checkbox:after {
+    content: '';
+    display: none;
+    position: absolute;
+    left: 2px;
+    width: 3px;
+    height: 7px;
+    border: solid #ffffff;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+/* Custom checkbox/radio handle */
+form .choice-option:hover > .custom-radio,
+form .choice-option:hover > .custom-checkbox {
+    background-color: #d9d9d9;
+}
+
+form .choice-option > input:checked + .custom-radio {
+    border: 7px solid #946E48;
+    background-color: #ffffff;
+}
+
+form .choice-option > input:checked + .custom-checkbox {
+    border: 5px solid #946E48;
+    background-color: #946E48;
+}
+
+form .choice-option > input:checked + .custom-checkbox:after {
+    display: block;
+}
+
+/* Responsive breakpoints */
+@media screen and (min-width: 576px) {
+    form .choice-group {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+@media screen and (min-width: 768px) {
+    header {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 3rem;
+    }
+
+    header .hamburger-menu,
+    header .order {
+        display: none;
+    }
+
+    header .navigation-inline {
+        display: flex;
+    }
+
+    form .two-columns {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        column-gap: 10px;
+    }
+}
+
+@media screen and (min-width: 992px) {
+}

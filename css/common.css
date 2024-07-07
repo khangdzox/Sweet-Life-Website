@@ -1,0 +1,360 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Nunito, Arial, sans-serif;
+}
+
+body {
+    height: auto;
+}
+
+h2 {
+    margin: 1.5rem 2rem;
+    font-family: Fredoka, sans-serif;
+    font-size: 36px;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: underline;
+    color: rgb(123, 71, 46);
+}
+
+/* Header Styling
+ * Including Header, Hamburger menu, Title, Navigation, Order button
+ */
+
+header {
+
+    position: sticky;
+    top: 0;
+    z-index: 5;
+
+    height: 64px;
+    display: grid;
+    grid-template-columns: 64px auto 64px;
+    background-color: white;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.186);
+    transition: all 0.3s;
+}
+
+/* Hamburger button */
+header .hamburger-menu {
+    width: 64px;
+    height: 64px;
+    padding: 18px 16px;
+
+    cursor: pointer;
+}
+
+header .hamburger-menu .line {
+    width: 32px;
+    height: 6px;
+    margin-bottom: 5px;
+    border-radius: 3px;
+
+    background-color: black;
+    transition: all 0.3s;
+}
+
+header .hamburger-menu:hover .line {
+    background-color: #946E48;
+}
+
+/* Website title */
+header .title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header .title h1 {
+    font-family: "Concert One", sans-serif;
+    font-size: 2.25rem;
+    letter-spacing: 1px;
+    color: #946E48;
+}
+
+/* Inline navigation */
+header .navigation-inline {
+    display: none;
+
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+header .navigation-inline a {
+    margin: 0 1rem;
+
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+
+    transition: all 0.3s;
+}
+
+header .navigation-inline a:hover,
+header .navigation-inline a.active {
+    color: #946E48;
+}
+
+header .navigation-inline .order-btn {
+    padding: .2rem 1.5rem;
+    border-radius: 1rem;
+
+    color: white;
+    background-color: black;
+}
+
+header .navigation-inline .order-btn:hover,
+header .navigation-inline .order-btn.active {
+    color:  white;
+    background-color: #946E48;
+}
+
+/* Styling order button */
+header .order {
+    display: block;
+    width: 64px;
+    height: 64px;
+    padding: 14px 16px;
+}
+
+header .order i {
+    font-size: 2rem;
+    color: black;
+    transition: all 0.3s;
+}
+
+header .order:hover i {
+    color: #946E48;
+}
+
+/* Navigation sidebar */
+.navigation-sidebar {
+    position: fixed;
+    top: 0;
+    z-index: 10;
+}
+
+.navigation-sidebar .overlay {
+    display: none;
+    position: fixed;
+
+    width: 100vw;
+    height: 100vh;
+
+    background-color: rgba(0, 0, 0, .75);
+    backdrop-filter: blur(10px);
+
+    transition: all 0.3s;
+}
+
+.navigation-sidebar nav {
+    position: fixed;
+    left: -220px;
+
+    display: flex;
+    flex-direction: column;
+    
+    width: 220px;
+    height: 100vh;
+
+    background-color: black;
+
+    transition: all .3s;
+}
+
+.navigation-sidebar nav .nav-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: .5rem 0;
+}
+
+.navigation-sidebar nav .nav-header h3 {
+    color: #ddd;
+    padding-left: 1.5rem;
+    font-size: 1.5rem;
+}
+
+.navigation-sidebar nav .nav-header .close-btn {
+    width: 3rem;
+    height: 3rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    cursor: pointer;
+
+    transition: all .3s;
+}
+
+.navigation-sidebar nav .nav-header .close-btn:hover {
+    padding-right: 1rem;
+}
+
+.navigation-sidebar nav .close-btn i {
+    color: #ddd;
+    font-size: 1.5rem;
+}
+
+.navigation-sidebar nav a {
+    display: block;
+    height: 3rem;
+    padding: 1rem 1.5rem;
+
+    color: #aaa;
+    text-decoration: none;
+
+    transition: all 0.3s;
+}
+
+.navigation-sidebar nav a.active {
+    color: white;
+    background-color: rgba(255, 255, 255, 0.1);
+    font-weight: 900;
+}
+
+.navigation-sidebar nav a:hover {
+    color: white;
+    background-color: rgba(255, 255, 255, 0.15);
+    padding-left: 2.5rem;
+}
+
+.navigation-sidebar.opened .overlay {
+    display: block;
+}
+
+.navigation-sidebar.opened nav {
+    left: 0;
+}
+
+/* Main */
+
+main {
+    min-height: calc(100vh - 184px);
+}
+
+/* Footer
+ * Including Brand name, contact buttons, and copyright statement
+ */
+
+footer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    padding: 16px;
+    border-top: 1px solid rgba(0, 0, 0, 0.186);
+}
+
+footer > * {
+    margin: 8px;
+}
+
+footer h1 {
+    font-family: "Concert One", sans-serif;
+    font-size: 2.25rem;
+    letter-spacing: 1px;
+    color: #946E48;
+}
+
+footer .contacts {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+footer .contacts a {
+    display: block;
+    width: 2rem;
+    height: 1.8rem;
+    font-size: 1.5rem;
+    text-align: center;
+    color: black;
+    border-radius: 4px;
+    transition: all 0.3s; 
+}
+
+footer .contacts a:hover {
+    background-color: #ccc;
+}
+
+footer .copyright {
+    text-align: center;
+}
+
+/* Components */
+
+/* cited-img
+ * Including img and citation
+ */
+
+.cited-img {
+    position: relative;
+    z-index: 0;
+    transition: all 0.3s;
+}
+
+.cited-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.cited-img .cite {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 0 .5rem;
+    color: #555;
+    background-color: rgba(255, 255, 255, 0.6);
+    text-decoration: none;
+    font-size: 12px;
+    transition: all 0.3s;
+}
+
+.cited-img .cite:hover {
+    color: #000;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.cited-img.background {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.cited-img.rounded {
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* Responsive breakpoint */
+
+@media screen and (min-width: 768px) {
+    header {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 3rem;
+    }
+
+    header .hamburger-menu,
+    header .order {
+        display: none;
+    }
+
+    header .navigation-inline {
+        display: flex;
+    }
+}
+
+@media screen and (min-width: 992px) {
+}
